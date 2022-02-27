@@ -1,0 +1,47 @@
+$clrPrimary: rgba(36, 20, 20, 0.685);
+$clrButton: rgba(209, 202, 202, 0.8);
+$font-stack: bold 1em Helvetica;
+
+@mixin flexCenter($direction) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: space-around;
+  align-items: center;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  height: 100vh;
+
+  background: $clrButton;
+  @include flexCenter(column);
+  h2,
+  h1 {
+    color: $clrPrimary;
+    margin: 1em;
+  }
+  .players {
+    @include flexCenter(column);
+    text-align: center;
+    margin: 2em;
+  }
+  button {
+    color: $clrPrimary;
+    background: $clrButton;
+    padding: 0.8em;
+    font: $font-stack;
+    text-transform: uppercase;
+    &:hover {
+      color: $clrButton;
+      background: $clrPrimary;
+      cursor: pointer;
+    }
+  }
+  img {
+    margin: 2em;
+  }
+}

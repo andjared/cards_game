@@ -1,0 +1,55 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  margin-top: 5em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container h2,
+.container h1 {
+  color: rgba(36, 20, 20, 0.685);
+  margin: 1em;
+}
+
+.container .players {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  margin: 2em;
+}
+
+.container button {
+  color: rgba(36, 20, 20, 0.685);
+  padding: 0.8em;
+  font: 1em bold Helvetica;
+  text-transform: uppercase;
+}
+
+.container img {
+  margin: 2em;
+}
+/*# sourceMappingURL=style.css.map */

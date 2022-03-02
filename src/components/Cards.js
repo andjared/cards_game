@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Cards({ cards }) {
   return (
-    <div>
+    <div className="cards">
       {cards &&
         cards.map((card) => {
           const { image, code } = card;

@@ -9,6 +9,7 @@ function App() {
   const [round, setRound] = useState(0);
   const [playerOneScore, setPlayerOneScore] = useState(0);
   const [playerTwoScore, setPlayerTwoScore] = useState(0);
+  const [disable, setDisable] = useState(false);
 
   const drawAcard = async () => {
     const response = await fetch(
@@ -18,6 +19,9 @@ function App() {
     setCards(data.cards);
     getCardsValues(data.cards);
     setRound((prevRound) => prevRound + 1);
+    if (round === 4) {
+      setDisable(true);
+    }
   };
 
   //get cards value in array type of numbers because drawAcard returns card value type of string
@@ -57,16 +61,18 @@ function App() {
     setRound(0);
     setPlayerOneScore(0);
     setPlayerTwoScore(0);
+    setDisable(false);
   };
   return (
     <div className="App">
       <div className="container">
         <div className="players">
           <Players
+            disable={disable}
             round={round}
             playerOneScore={playerOneScore}
             playerTwoScore={playerTwoScore}
-            handleClick={drawAcard}
+            handlePlay={drawAcard}
             handleRestart={handleRestart}
           />
         </div>

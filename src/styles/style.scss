@@ -16,7 +16,6 @@ $font-stack: bold 1em Helvetica;
 
 .container {
   height: 100vh;
-
   background: $clrButton;
   @include flexCenter(column);
   h2,
@@ -41,7 +40,13 @@ $font-stack: bold 1em Helvetica;
       cursor: pointer;
     }
   }
-  img {
-    margin: 2em;
+  .cards {
+    img {
+      margin: 0 auto;
+      padding: 1rem;
+    }
+    @media screen and (max-width: 1200px) {
+      @include flexCenter(row);
+    }
   }
 }

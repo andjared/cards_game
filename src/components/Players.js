@@ -2,16 +2,17 @@ import React from "react";
 import Button from "./Button";
 
 export default function Players({
+  disable,
   round,
   playerOneScore,
   playerTwoScore,
-  handleClick,
+  handlePlay,
   handleRestart,
 }) {
   return (
     <div>
       <h2>Round {round}</h2>
-      <Button handleClick={handleClick} btnText="play" />
+      <Button disable={disable} handleClick={handlePlay} btnText={"play"} />
       <div className="player-one">
         <h2>Player One score: {playerOneScore}</h2>
       </div>

@@ -1,9 +1,11 @@
 import React from "react";
 
-export default function Button({ handleClick, btnText }) {
+export default function Button({ handleClick, btnText, disable }) {
   return (
     <div>
-      <button onClick={handleClick}>{btnText}</button>
+      <button disabled={disable} onClick={handleClick}>
+        {btnText}
+      </button>
     </div>
   );
 }
